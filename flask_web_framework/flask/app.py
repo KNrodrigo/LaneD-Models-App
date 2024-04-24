@@ -118,7 +118,7 @@ def detect_yolo2():
 
 
 @app.route('/view/YOLO', methods=['GET'])
-def view():
+def view_yolo():
     # Specify your S3 bucket name and folder prefix
     bucket_name = 'nawordth-rodrigo'
     prefix = 'output/'
@@ -149,7 +149,7 @@ def view():
 ############################################################################################################
 
 @app.route('/view/YOLO2', methods=['GET'])
-def view():
+def view_yolo2():
     # Specify your S3 bucket name and folder prefix
     bucket_name = 'nawordth-rodrigo'
     prefix = 'output/'
