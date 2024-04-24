@@ -1,0 +1,40 @@
+version: '2'
+services:
+  flask:
+    container_name: flask-svc
+    build:
+      context: ./flask_web_framework/flask
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - PORT=5000
+      - AWS_ACCESS_KEY_ID=AKIA2UC3C4K3GYDM44Z3
+      - AWS_SECRET_ACCESS_KEY=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
+      - AWS_DEFAULT_REGION=ap-southeast-2
+  yolo:
+    container_name: yolo-svc
+    build:
+      context: ./yolo
+      dockerfile: Dockerfile
+    ports:
+      - "5001:5000"
+    environment:
+      - PORT=5000
+      - AWS_ACCESS_KEY_ID=AKIA2UC3C4K3GYDM44Z3
+      - AWS_SECRET_ACCESS_KEY=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
+      - AWS_DEFAULT_REGION=ap-southeast-2
+  yolo2:
+    container_name: yolo2-svc
+    build:
+      context: ./yolo2
+      dockerfile: Dockerfile
+    ports:
+      - "5002:5000"
+    environment:
+      - PORT=5000
+      - AWS_ACCESS_KEY_ID=AKIA2UC3C4K3GYDM44Z3
+      - AWS_SECRET_ACCESS_KEY=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
+      - AWS_DEFAULT_REGION=ap-southeast-2
+
+
