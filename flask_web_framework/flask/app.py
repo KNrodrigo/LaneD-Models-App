@@ -138,7 +138,7 @@ def view_yolo():
     #if not files:
      #   return render_template('error.html', message='No files processed with model YOLO found'), 404
 
-    # Generate pre-signed URLs for each image
+     # Generate pre-signed s3 URLs for each image
     signed_urls = {}
     for file_name in yolo_files:
         signed_url = s3.generate_presigned_url('get_object', Params={'Bucket': bucket_name, 'Key': file_name}, ExpiresIn=3600)
@@ -174,7 +174,7 @@ def view_yolo2():
     #if not files:
      #   return render_template('error.html', message='No files processed with model YOLO found'), 404
 
-    # Generate pre-signed URLs for each image
+    # Generate pre-signed s3 URLs for each image
     signed_urls = {}
     for file_name in yolo_files:
         signed_url = s3.generate_presigned_url('get_object', Params={'Bucket': bucket_name, 'Key': file_name}, ExpiresIn=3600)
