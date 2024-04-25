@@ -31,8 +31,8 @@ Make sure to install Git and Git LFS as prerequisites
 
 3. To test we can use Client URL, however there is the sandbox mobile app (APK) for this.
 
-   eg:  curl -X POST -F "file=@example.jpg" http://localhost:5000/detect/<model>/
-   model: yolo, yolo2 and unet.
+   eg:  curl -X POST -F "file=@example.jpg" http://localhost:5000/detect/model/
+   replace model with: yolo, yolo2 and unet.
 
 4. To view the images processed against a certain model:
    
