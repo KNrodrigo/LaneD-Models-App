@@ -127,19 +127,24 @@ def view_yolo():
     response = s3.list_objects_v2(Bucket=bucket_name, Prefix=prefix)
     if 'Contents' not in response:
         return jsonify({'error': 'No files found'}), 404
-
+    else:
+        keys = [content['Key'] for content in response['Contents']]
+        print(keys)
   # Extract file names that start with 'YOLO'
-    files = [obj['Key'] for obj in response['Contents'] if obj['Key'].startswith('YOLO')]
-    if not files:
-        return render_template('error.html', message='No files processed with model YOLO found'), 404
+    yolo_files = []
+    for item in keys:
+        if item.startswith("output/YOLO_"):
+         yolo_files.append(item)
+    #if not files:
+     #   return render_template('error.html', message='No files processed with model YOLO found'), 404
 
     # Generate pre-signed URLs for each image
     signed_urls = {}
-    for file_name in files:
+    for file_name in yolo_files:
         signed_url = s3.generate_presigned_url('get_object', Params={'Bucket': bucket_name, 'Key': file_name}, ExpiresIn=3600)
         signed_urls[file_name] = signed_url
 
-    return jsonify({'files': files}), 200
+    return jsonify({'files': signed_urls}), 200
     # Render HTML template and pass the signed URLs to it
     #return render_template('view_yolo.html', signed_urls=signed_urls)
 
@@ -158,19 +163,24 @@ def view_yolo2():
     response = s3.list_objects_v2(Bucket=bucket_name, Prefix=prefix)
     if 'Contents' not in response:
         return jsonify({'error': 'No files found'}), 404
-
-  # Extract file names that start with 'YOLO2'
-    files = [obj['Key'] for obj in response['Contents'] if obj['Key'].startswith('YOLO2')]
-    if not files:
-        return render_template('error.html', message='No files processed with model YOLO found'), 404
+    else:
+        keys = [content['Key'] for content in response['Contents']]
+        print(keys)
+  # Extract file names that start with 'YOLO'
+    yolo_files = []
+    for item in keys:
+        if item.startswith("output/YOLO2_"):
+         yolo_files.append(item)
+    #if not files:
+     #   return render_template('error.html', message='No files processed with model YOLO found'), 404
 
     # Generate pre-signed URLs for each image
     signed_urls = {}
-    for file_name in files:
+    for file_name in yolo_files:
         signed_url = s3.generate_presigned_url('get_object', Params={'Bucket': bucket_name, 'Key': file_name}, ExpiresIn=3600)
         signed_urls[file_name] = signed_url
 
-    return jsonify({'files': files}), 200
+    return jsonify({'files': signed_urls}), 200
     # Render HTML template and pass the signed URLs to it
     #return render_template('view_yolo.html', signed_urls=signed_urls)
 
