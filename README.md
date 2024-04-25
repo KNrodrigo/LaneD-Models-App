@@ -7,7 +7,7 @@ Additionally, the app provides a feature to view the processed images or videos 
 
 
 ## How it Works 
-![Alt Text](High Level - App Architecture.jpg.jpg)
+![Alt Text](app_diagram.jpg)
 
 ## Setup
 
