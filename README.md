@@ -66,5 +66,6 @@ NOTE: Docker, GIT and GIT LFS are pre-requisites.
 - **Nawordth Rodrigo** 
 
 ## Examples
-![Uploading YOLO2_example2vNPS.jpg…]()
+![Alt Text](YOLO2_example2vNPS.jpg)
+
 
