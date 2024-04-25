@@ -193,6 +193,8 @@ def detect_yolo():
     # Extract the file name from the JSON data
     file_name = request.json['file_name']
     # Call the main_start function with the extracted file name
+    ####DAI UPODTE YOUR PREPROCESSING HERE  (cll another function for pre-rpocessing as per model
+    #requiremnt and return the file back here and pass that file name to the main start)
     main_start(file_name)
     return jsonify({'message': 'File  processing started'})
 

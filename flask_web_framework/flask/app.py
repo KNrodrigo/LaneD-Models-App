@@ -8,7 +8,7 @@ import requests
 
 
 app = Flask(__name__)
-s3 = boto3.client('s3')
+s3 = boto3.client('s3') #Setting up s3 client in boto3 library
 
 ############################################################################################################
 #                                                YOLO                                                      #
@@ -18,6 +18,7 @@ s3 = boto3.client('s3')
 @app.route('/detect/YOLO/', methods=['POST'])
 def detect_yolo():
     # Checking if file is sent in client request
+   # print('Request body is: {0}'.format(request_body.decode('utf-8'))) 
     if 'file' not in request.files:
         return jsonify({'error': 'No file found'}), 400
     file = request.files['file']
@@ -119,11 +120,11 @@ def detect_yolo2():
 
 @app.route('/view/YOLO', methods=['GET'])
 def view_yolo():
-    # Specify your S3 bucket name and folder prefix
+    # S3 bucket name and folder prefix
     bucket_name = 'nawordth-rodrigo'
     prefix = 'output/'
 
-    # List objects in the bucket with the specified prefix
+    # Listign objects in the bucket with the the prefix folder
     response = s3.list_objects_v2(Bucket=bucket_name, Prefix=prefix)
     if 'Contents' not in response:
         return jsonify({'error': 'No files found'}), 404
@@ -144,6 +145,16 @@ def view_yolo():
         signed_url = s3.generate_presigned_url('get_object', Params={'Bucket': bucket_name, 'Key': file_name}, ExpiresIn=3600)
         signed_urls[file_name] = signed_url
 
+     #FOR TESTINF PURPOSES
+    # Generating HTML containing embedded <img> elements with the presigned URL
+    if yolo_files:
+        html_content = ''
+        for file_name, url in signed_urls.items():
+            html_content += f'<img src="{url}" alt="{file_name}"><br>'
+        return html_content, 200
+    else: 
+        return jsonify({'error': 'No files found'}), 404
+
     return jsonify({'files': signed_urls}), 200
     # Render HTML template and pass the signed URLs to it
     #return render_template('view_yolo.html', signed_urls=signed_urls)
@@ -155,7 +166,7 @@ def view_yolo():
 
 @app.route('/view/YOLO2', methods=['GET'])
 def view_yolo2():
-    # Specify your S3 bucket name and folder prefix
+    # S3 bucket name and folder prefix
     bucket_name = 'nawordth-rodrigo'
     prefix = 'output/'
 
@@ -179,6 +190,17 @@ def view_yolo2():
     for file_name in yolo_files:
         signed_url = s3.generate_presigned_url('get_object', Params={'Bucket': bucket_name, 'Key': file_name}, ExpiresIn=3600)
         signed_urls[file_name] = signed_url
+
+
+     #FOR TESTINF PURPOSES
+    # Generating HTML containing embedded <img> elements with the presigned URL
+    if yolo_files:
+        html_content = ''
+        for file_name, url in signed_urls.items():
+            html_content += f'<img src="{url}" alt="{file_name}"><br>'
+        return html_content, 200
+    else: 
+        return jsonify({'error': 'No files found'}), 404
 
     return jsonify({'files': signed_urls}), 200
     # Render HTML template and pass the signed URLs to it
