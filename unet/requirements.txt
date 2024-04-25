@@ -1,0 +1,10 @@
+matplotlib
+opencv-contrib-python
+imutils
+scikit-learn
+tqdm
+torchvision
+torch
+flask
+boto3
+opencv-python>=4.1.2
