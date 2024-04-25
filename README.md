@@ -5,13 +5,16 @@ This Flask application provides an API for uploading images for object detection
 As this is integrated with a Flutter app, userrs can easily capture or upload images and videos for processing against these detection models. 
 Additionally, the app provides a feature to view the processed images or videos based on the selected model.
 
+
+## How it Works 
+![Alt Text](High Level - App Architecture.jpg.jpg)
+
 ## Setup
 
 Ideally I reccommed to run this in a Linux enviroment, if running in windows using Docker Desktop would be helpful. 
 NOTE: Docker, GIT and GIT LFS are pre-requisites.
 
 1. Clone the repository:
-
 
    git clone https://github.com/KNrodrigo/LaneD-Models-App
 
