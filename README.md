@@ -1,18 +1,25 @@
 
-# Lane Detection and Viewing Service App - University of Wollongong
-
-This Flask application provides an API for uploading images for object detection using YOLO, YOLO2, and UNet models.
+# Lane Detection and Viewing Service App Project -  Master of Computer Science @ University of Wollongong
+This app created using flutter and flask provides an API for uploading images for object detection using YOLO, YOLO2, and UNet models.
 As this is integrated with a Flutter app, userrs can easily capture or upload images and videos for processing against these detection models. 
 Additionally, the app provides a feature to view the processed images or videos based on the selected model.
 
 
 ## How it Works 
-![Alt Text](High Level - App Architecture.jpg.jpg)
+![Alt Text](app_diagram.jpg)
 
 ## Setup
+Ideally I reccommed to run this in a Linux enviroment
+### Pre-requisites
+Here's a general outline of the steps you would need to follow to set up YOLO lane detection using Docker:
 
-Ideally I reccommed to run this in a Linux enviroment, if running in windows using Docker Desktop would be helpful. 
-NOTE: Docker, GIT and GIT LFS are pre-requisites.
+Install Docker Desktop or Docker Engine: If you're using Windows, you can install Docker Desktop from the official Docker website. Make sure to enable the necessary virtualization features in your BIOS settings if they're not.
+
+Clone the YOLO lane detection repository: You'll need to clone the repository containing the code for YOLO lane detection. 
+
+Make sure to install Git and Git LFS as prerequisites
+
+### Steps to run
 
 1. Clone the repository:
 
@@ -22,7 +29,13 @@ NOTE: Docker, GIT and GIT LFS are pre-requisites.
 
    Docker compose up
 
+3. To test we can use Client URL, however there is the sandbox mobile app (APK) for this.
 
+   eg:  curl -X POST -F "file=@example.jpg" http://localhost:5000/detect/model/
+   replace model with: yolo, yolo2 and unet.
+
+4. To view the images processed against a certain model:
+   
 
 ## Endpoints
 
