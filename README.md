@@ -1,6 +1,6 @@
 
 # Lane Detection and Viewing Service App Project -  Master of Computer Science @ University of Wollongong
-This Flask application provides an API for uploading images for object detection using YOLO, YOLO2, and UNet models.
+This app created using flutter and flask provides an API for uploading images for object detection using YOLO, YOLO2, and UNet models.
 As this is integrated with a Flutter app, userrs can easily capture or upload images and videos for processing against these detection models. 
 Additionally, the app provides a feature to view the processed images or videos based on the selected model.
 
