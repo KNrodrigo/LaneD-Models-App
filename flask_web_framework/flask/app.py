@@ -205,7 +205,7 @@ def view_yolo2():
     else:
         keys = [content['Key'] for content in response['Contents']]
         print(keys)
-  # Extract file names that start with 'YOLO'
+  # Extract file names that start with 'YOLO2'
     yolo_files = []
     for item in keys:
         if item.startswith("output/YOLO2_"):
@@ -251,7 +251,7 @@ def view_unet():
     else:
         keys = [content['Key'] for content in response['Contents']]
         print(keys)
-  # Extract file names that start with 'YOLO'
+  # Extract file names that start with 'UNET'
     yolo_files = []
     for item in keys:
         if item.startswith("output/UNET_"):
