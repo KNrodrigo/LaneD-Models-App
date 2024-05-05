@@ -48,7 +48,7 @@ def detect_yolo():
     try:
         response = requests.post('http://yolo-svc:5000/', json=data)
         if response.status_code == 200:
-              return jsonify({'message': 'File uploaded and processing started', 'file_name_processed': new_file_name})
+              return jsonify({'message': 'File succesfully uploaded and processing started', 'file_name_processed': new_file_name})
         else:
             return jsonify({'error': 'Failed to start processing'}), 500
     except Exception as e:
@@ -91,7 +91,7 @@ def detect_yolo2():
     try:
         response = requests.post('http://yolo2-svc:5000/', json=data)
         if response.status_code == 200:
-           return jsonify({'message': 'File uploaded and processing started', 'file_name_processed': new_file_name})
+           return jsonify({'message': 'File successfully uploaded and processing started', 'file_name_processed': new_file_name})
         else:
             return jsonify({'error': 'Failed to start processing'}), 500
     except Exception as e:
@@ -135,7 +135,7 @@ def detect_unet():
     try:
         response = requests.post('http://unet-svc:5000/', json=data)
         if response.status_code == 200:
-           return jsonify({'message': 'File uploaded and processing started', 'file_name_processed': new_file_name})
+           return jsonify({'message': 'File successfully uploaded and processing started', 'file_name_processed': new_file_name})
         else:
             return jsonify({'error': 'Failed to start processing'}), 500
     except Exception as e:
