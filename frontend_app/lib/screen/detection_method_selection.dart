@@ -1,24 +1,35 @@
 import 'package:flutter/material.dart';
-import 'camera_screen.dart'; // Make sure the path is correct based on your project structure
+import 'package:camera/camera.dart';
+import 'camera_screen.dart';
 
 class DetectionMethodSelection extends StatelessWidget {
+  final List<CameraDescription> cameras;
+
+  const DetectionMethodSelection({Key? key, required this.cameras})
+      : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Select Detection Method")),
+      appBar: AppBar(
+        title: const Text("Select Detection Method"),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             DetectionMethod(
-                name: 'YOLO',
-                onPressed: () => navigateToCamera(context, 'YOLO')),
+              name: 'YOLO',
+              onPressed: () => navigateToCamera(context, 'YOLO'),
+            ),
             DetectionMethod(
-                name: 'YOLO2',
-                onPressed: () => navigateToCamera(context, 'YOLO2')),
+              name: 'YOLO2',
+              onPressed: () => navigateToCamera(context, 'YOLO2'),
+            ),
             DetectionMethod(
-                name: 'UNET',
-                onPressed: () => navigateToCamera(context, 'UNET')),
+              name: 'UNET',
+              onPressed: () => navigateToCamera(context, 'UNET'),
+            ),
           ],
         ),
       ),
@@ -29,7 +40,9 @@ class DetectionMethodSelection extends StatelessWidget {
     Navigator.push(
       context,
       MaterialPageRoute(
-          builder: (context) => CameraApp(detectionMethod: method)),
+        builder: (context) =>
+            CameraApp(cameras: cameras, detectionMethod: method),
+      ),
     );
   }
 }
