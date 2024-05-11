@@ -4,6 +4,10 @@ This app created using flutter and flask provides an API for uploading images fo
 As this is integrated with a Flutter app, userrs can easily capture or upload images and videos for processing against these detection models. 
 Additionally, the app provides a feature to view the processed images or videos based on the selected model.
 
+This app is generally helpful in reseach and academia purposes enabling students and researchers to use this app and to compare how well
+different lane detection models perform with each other. Building with open souce in mind, other contributors can contribute to this app by intergation new 
+models, designs and to help improve this applicaiton.
+
 
 ## How it Works 
 ![Alt Text](app_diagram.jpg)
