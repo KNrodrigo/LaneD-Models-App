@@ -59,17 +59,17 @@ Make sure to install Git and Git LFS as prerequisites
 
 ### View Processed Images (YOLO)
 
-- **URL:** `/view/yolo`
+- **URL:** `/view/yolo/`
 - **Method:** GET
 
 ### View Processed Images (YOLO2)
 
-- **URL:** `/view/yolo2`
+- **URL:** `/view/yolo2/`
 - **Method:** GET
 
 ### View Processed Images (UNET)
 
-- **URL:** `/view/unet`
+- **URL:** `/view/unet/`
 - **Method:** GET
 
 ## Authors
