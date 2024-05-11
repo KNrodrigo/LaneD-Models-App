@@ -147,7 +147,7 @@ def detect_unet():
 #                                               Viewing  YOLO                                              #
 #                                                                                                          #
 ############################################################################################################
-@app.route('/view/yolo', methods=['GET'])
+@app.route('/view/yolo/', methods=['GET'])
 def view_yolo():
     # S3 bucket name and folder prefix
     bucket_name = 'nawordth-rodrigo'
@@ -179,7 +179,7 @@ def view_yolo():
     if yolo_files:
         html_content = ''
         for file_name, url in signed_urls.items():
-            html_content += f'<img src="{url}" alt="{file_name}"><br>'
+            html_content += f'<img src="{url}" alt="{file_name}"><br><br><br>'
         return html_content, 200
     else: 
         return jsonify({'error': 'No files found'}), 404
@@ -192,7 +192,7 @@ def view_yolo():
 #                                               Viewing   YOLO2                                            #
 #                                                                                                          #
 ############################################################################################################
-@app.route('/view/yolo2', methods=['GET'])
+@app.route('/view/yolo2/', methods=['GET'])
 def view_yolo2():
     # S3 bucket name and folder prefix
     bucket_name = 'nawordth-rodrigo'
@@ -225,7 +225,7 @@ def view_yolo2():
     if yolo_files:
         html_content = ''
         for file_name, url in signed_urls.items():
-            html_content += f'<img src="{url}" alt="{file_name}"><br>'
+            html_content += f'<img src="{url}" alt="{file_name}"><br><br><br>'
         return html_content, 200
     else: 
         return jsonify({'error': 'No files found'}), 404
@@ -238,7 +238,7 @@ def view_yolo2():
 #                                               Viewing   UNET                                             #
 #                                                                                                          #
 ############################################################################################################
-@app.route('/view/unet', methods=['GET'])
+@app.route('/view/unet/', methods=['GET'])
 def view_unet():
     # S3 bucket name and folder prefix
     bucket_name = 'nawordth-rodrigo'
@@ -271,7 +271,7 @@ def view_unet():
     if yolo_files:
         html_content = ''
         for file_name, url in signed_urls.items():
-            html_content += f'<img src="{url}" alt="{file_name}"><br>'
+            html_content += f'<img src="{url}" alt="{file_name}"><br><br><br>'
         return html_content, 200
     else: 
         return jsonify({'error': 'No files found'}), 404
