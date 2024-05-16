@@ -1,13 +1,14 @@
 
-# Lane Detection and Viewing Service App Project -  Master of Computer Science @ University of Wollongong
-This app created using flutter and flask provides an API for uploading images for object detection using YOLOP, YOLOPv2, and UNet models.
-As this is integrated with a Flutter app, userrs can easily capture or upload images and videos for processing against these detection models. 
+# A Research on how different Lane Detection Models behave using a Cross Platfrom Mobile Applcaiton -  Master of Computer Science @ University of Wollongong
+This app created using flutter and flask. Using Flask framework we have exposed API's for uploading images for object detection using YOLOP, YOLOPv2, UNet and PSPNet models.
+As this is integrated with a Flutter app, users can easily capture or upload images and videos for processing against these detection models. 
 Additionally, the app provides a feature to view the processed images or videos based on the selected model.
 
 This app is generally helpful in reseach and academia purposes enabling students and researchers to use this app and to compare how well
 different lane detection models perform with each other. Building with open souce in mind, other contributors can contribute to this app by intergation new 
-models, designs and to help improve this applicaiton.
+models, designs and other Machine Learning Integrations not just limited to Computer Vision to help improve this applicaiton built for a group project at the University of Wollongong.
 
+Credits to the amazing people: - **Dai Dong**  **Shu-YU** **Shazeb Gul**  **Sabbir Anwar** **Sami**  **Nawordth Rodrigo** 
 
 ## How it Works 
 ![Alt Text](app_diagram.jpg)
