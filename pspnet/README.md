@@ -13,7 +13,7 @@ Python >= 3.7
 2. Move the `pspnet` folder: `cd pspnet`
 3. Create a virtual environment: `python3 -m venv pspnet`
 4. Activate a virtual environment:
-* Windows: `<env_name>\Scripts\activate`
+* Windows: `pspnet\Scripts\activate`
 * macOS/Linux: `source pspnet/bin/activate`
 5. Install dependencies: `pip install -r requirements.txt`
 6. Download the VIL-100 dataset using this [Link](https://github.com/yujun0-0/MMA-Net)
