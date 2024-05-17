@@ -1,5 +1,5 @@
 
-# A Research on how different Lane Detection Models behave using a Cross Platfrom Mobile Applcaiton -  Master of Computer Science @ University of Wollongong
+# A Research on how different Lane Detection Models behave using a Cross Platfrom Mobile Application -  Master of Computer Science @ University of Wollongong
 This app created using flutter and flask. Using Flask framework we have exposed API's for uploading images for object detection using YOLOP, YOLOPv2, UNet and PSPNet models.
 As this is integrated with a Flutter app, users can easily capture or upload images and videos for processing against these detection models. 
 Additionally, the app provides a feature to view the processed images or videos based on the selected model.
