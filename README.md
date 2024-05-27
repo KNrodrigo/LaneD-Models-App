@@ -1,5 +1,5 @@
 
-# A Research on how different Lane Detection Models behave using a Cross Platfrom Mobile Application -  Master of Computer Science @ University of Wollongong
+# A Research on how Different Lane Detection Models behave using a Cross Platfrom Mobile Application -  Master of Computer Science @ University of Wollongong
 This app created using flutter and flask. Using Flask framework we have exposed API's for uploading images for object detection using YOLOP, YOLOPv2, UNet and PSPNet models.
 As this is integrated with a Flutter app, users can easily capture or upload images and videos for processing against these detection models. 
 Additionally, the app provides a feature to view the processed images or videos based on the selected model.
@@ -44,15 +44,15 @@ Make sure to install Git and Git LFS as prerequisites
 
 ## Endpoints
 
-### Upload Image for Object Detection (YOLO)
+### Upload Image for Object Detection (YOLOP)
 
-- **URL:** `/detect/yolo/`
+- **URL:** `/detect/yolop/`
 - **Method:** POST
 - **Request Body:** Form-data with a file OR picture taken from the flutter app
 
-### Upload Image for Object Detection (YOLO2)
+### Upload Image for Object Detection (YOLOPv2)
 
-- **URL:** `/detect/yolo2/`
+- **URL:** `/detect/yolop2/`
 - **Method:** POST
 - **Request Body:** Form-data with a file OR picture taken from the flutter app
 
@@ -80,7 +80,7 @@ Make sure to install Git and Git LFS as prerequisites
 ## Authors
 
 - **Dai Dong** 
-- **Shu-YU**
+- **Shu-Yu Lin**
 - **Shazeb Gul** 
 - **Sabbir Anwar**
 - **Sami** 
@@ -89,4 +89,15 @@ Make sure to install Git and Git LFS as prerequisites
 ## Examples
 ![Alt Text](YOLO2_example2vNPS.jpg)
 
+## Demo Video
+The demo video of the mobile application can be found here:
 
+[Watch the demo video](https://github.com/KNrodrigo/LaneD-Models-App/tree/main/demo_video/app-demo.mp4)
+
+
+## Miscellaneous
+All experiments for model training and replication can be found here:
+- **Unet model:** https://github.com/KNrodrigo/LaneD-Models-App/tree/main/unet
+- **YOLOP:** https://github.com/KNrodrigo/LaneD-Models-App/tree/main/yolo
+- **YOLOPv2:** https://github.com/KNrodrigo/LaneD-Models-App/tree/main/yolo2
+- **PSPNET:** https://github.com/KNrodrigo/LaneD-Models-App/tree/main/pspnet
