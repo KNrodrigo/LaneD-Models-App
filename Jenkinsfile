@@ -1,4 +1,4 @@
-// A very simple JenkinsFile to deploy the containers Locally (Windows Env)
+// A very simple JenkinsFile to deploy the containers Locally (Windows Envs)
 pipeline {
     agent any
     
