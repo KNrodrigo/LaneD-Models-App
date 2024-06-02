@@ -22,7 +22,7 @@ This Flutter project demonstrates navigation between different screens, integrat
    git clone https://github.com/KNrodrigo/LaneD-Models-App
    ```
 2. **Install dependencies:**
-   Navigate to the project directory and run:
+   Navigate to the project directory frontend_app and run:
    ```
    flutter pub get
    ```
@@ -63,9 +63,6 @@ The application defines the following routes:
 
 ### Web View Integration
 - **Customizable Web View**: Each instance of `MyWebView` can be customized with a unique title and URL, allowing it to serve various content as needed throughout the app.
-
-## Screenshots
-Add screenshots here to show how the app looks and feels in action.
 
 #######################################################################
 This project is a starting point for a Flutter application.
