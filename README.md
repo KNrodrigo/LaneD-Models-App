@@ -8,7 +8,7 @@ This app is generally helpful in reseach and academia purposes enabling students
 different lane detection models perform with each other. Building with open souce in mind, other contributors can contribute to this app by intergation new 
 models, designs and other Machine Learning Integrations not just limited to Computer Vision to help improve this applicaiton built for a group project at the University of Wollongong.
 
-Credits to the amazing people: - **Dai Dong**  **Shu-YU** **Shazeb Gul**  **Sabbir Anwar** **Sami**  **Nawordth Rodrigo** 
+Credits to the amazing people: - **Dai Dong**  **Shu-Yu Lin** **Shazeb Gul**  **Sabbir Anwar** **Sami**  **Nawordth Rodrigo** 
 
 ## How it Works 
 ![Alt Text](app_diagram.jpg)
@@ -37,7 +37,7 @@ Make sure to install Git and Git LFS as prerequisites
 3. To test we can use Client URL, however there is the sandbox mobile app (APK) for this.
 
    eg:  curl -X POST -F "file=@example.jpg" http://localhost:5000/detect/model/
-   replace model with: yolo, yolo2 and unet.
+   replace model with: yolop, yolop2 and unet.
 
 4. To view the images processed against a certain model:
    
@@ -64,12 +64,12 @@ Make sure to install Git and Git LFS as prerequisites
 
 ### View Processed Images (YOLO)
 
-- **URL:** `/view/yolo/`
+- **URL:** `/view/yolop/`
 - **Method:** GET
 
 ### View Processed Images (YOLO2)
 
-- **URL:** `/view/yolo2/`
+- **URL:** `/view/yolop2/`
 - **Method:** GET
 
 ### View Processed Images (UNET)
@@ -92,12 +92,14 @@ Make sure to install Git and Git LFS as prerequisites
 ## Demo Video
 The demo video of the mobile application can be found here:
 
-[Watch the demo video](https://github.com/KNrodrigo/LaneD-Models-App/tree/main/demo_video/app-demo.mp4)
+[Watch the demo video](https://github.com/KNrodrigo/LaneD-Models-App/tree/main/demo_video)
 
+## Front-end
+The code for the front end of the mobile application can be found here: [frontend_app](https://github.com/KNrodrigo/LaneD-Models-App/tree/main/frontend_app).
 
-## Miscellaneous
+## Model Experiment
 All experiments for model training and replication can be found here:
-- **Unet model:** https://github.com/KNrodrigo/LaneD-Models-App/tree/main/unet
-- **YOLOP:** https://github.com/KNrodrigo/LaneD-Models-App/tree/main/yolo
-- **YOLOPv2:** https://github.com/KNrodrigo/LaneD-Models-App/tree/main/yolo2
-- **PSPNET:** https://github.com/KNrodrigo/LaneD-Models-App/tree/main/pspnet
+- **PSPNET:** [pspnet](https://github.com/KNrodrigo/LaneD-Models-App/tree/main/pspnet)
+- **YOLOP:** [yolop](https://github.com/KNrodrigo/LaneD-Models-App/tree/main/yolop)
+- **YOLOPv2:** [yolopv2](https://github.com/KNrodrigo/LaneD-Models-App/tree/main/yolop2)
+- **Unet model:** [unet](https://github.com/KNrodrigo/LaneD-Models-App/tree/main/unet)
